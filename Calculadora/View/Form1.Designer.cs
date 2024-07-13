@@ -51,7 +51,6 @@
             this.btnNumber0 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnComma = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnEqual = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblScreen = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +61,7 @@
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHead.Location = new System.Drawing.Point(0, 0);
             this.panelHead.Name = "panelHead";
-            this.panelHead.Size = new System.Drawing.Size(341, 43);
+            this.panelHead.Size = new System.Drawing.Size(338, 43);
             this.panelHead.TabIndex = 0;
             // 
             // panelFooter
@@ -71,7 +70,7 @@
             this.panelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelFooter.Location = new System.Drawing.Point(0, 469);
             this.panelFooter.Name = "panelFooter";
-            this.panelFooter.Size = new System.Drawing.Size(341, 66);
+            this.panelFooter.Size = new System.Drawing.Size(338, 66);
             this.panelFooter.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -96,12 +95,11 @@
             this.flowLayoutPanel1.Controls.Add(this.btnNumber0);
             this.flowLayoutPanel1.Controls.Add(this.btnComma);
             this.flowLayoutPanel1.Controls.Add(this.btnEqual);
-            this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 116);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(341, 353);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(338, 353);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // btnCE
@@ -145,6 +143,7 @@
             this.btnClearDigit.Size = new System.Drawing.Size(78, 64);
             this.btnClearDigit.TabIndex = 2;
             this.btnClearDigit.Text = "LIMPAR";
+            this.btnClearDigit.Click += new System.EventHandler(this.btnClearDigit_Click);
             // 
             // btnDivision
             // 
@@ -173,6 +172,7 @@
             this.btnNumber7.Size = new System.Drawing.Size(78, 64);
             this.btnNumber7.TabIndex = 4;
             this.btnNumber7.Text = "7";
+            this.btnNumber7.Click += new System.EventHandler(this.btnNumber7_Click);
             // 
             // btnNumber8
             // 
@@ -187,6 +187,7 @@
             this.btnNumber8.Size = new System.Drawing.Size(78, 64);
             this.btnNumber8.TabIndex = 5;
             this.btnNumber8.Text = "8";
+            this.btnNumber8.Click += new System.EventHandler(this.btnNumber8_Click);
             // 
             // btnNumber9
             // 
@@ -201,6 +202,7 @@
             this.btnNumber9.Size = new System.Drawing.Size(78, 64);
             this.btnNumber9.TabIndex = 6;
             this.btnNumber9.Text = "9";
+            this.btnNumber9.Click += new System.EventHandler(this.btnNumber9_Click);
             // 
             // btnMultiply
             // 
@@ -229,6 +231,7 @@
             this.btnNumber4.Size = new System.Drawing.Size(78, 64);
             this.btnNumber4.TabIndex = 8;
             this.btnNumber4.Text = "4";
+            this.btnNumber4.Click += new System.EventHandler(this.btnNumber4_Click);
             // 
             // btnNumber5
             // 
@@ -243,6 +246,7 @@
             this.btnNumber5.Size = new System.Drawing.Size(78, 64);
             this.btnNumber5.TabIndex = 9;
             this.btnNumber5.Text = "5";
+            this.btnNumber5.Click += new System.EventHandler(this.btnNumber5_Click);
             // 
             // btnNumber6
             // 
@@ -257,6 +261,7 @@
             this.btnNumber6.Size = new System.Drawing.Size(78, 64);
             this.btnNumber6.TabIndex = 10;
             this.btnNumber6.Text = "6";
+            this.btnNumber6.Click += new System.EventHandler(this.btnNumber6_Click);
             // 
             // btnSubtract
             // 
@@ -285,6 +290,7 @@
             this.btnNumber1.Size = new System.Drawing.Size(78, 64);
             this.btnNumber1.TabIndex = 12;
             this.btnNumber1.Text = "1";
+            this.btnNumber1.Click += new System.EventHandler(this.btnNumber1_Click);
             // 
             // btnNumber2
             // 
@@ -299,6 +305,7 @@
             this.btnNumber2.Size = new System.Drawing.Size(78, 64);
             this.btnNumber2.TabIndex = 13;
             this.btnNumber2.Text = "2";
+            this.btnNumber2.Click += new System.EventHandler(this.btnNumber2_Click);
             // 
             // btnNumber3
             // 
@@ -313,6 +320,7 @@
             this.btnNumber3.Size = new System.Drawing.Size(78, 64);
             this.btnNumber3.TabIndex = 14;
             this.btnNumber3.Text = "3";
+            this.btnNumber3.Click += new System.EventHandler(this.btnNumber3_Click);
             // 
             // btnSum
             // 
@@ -384,15 +392,6 @@
             this.btnEqual.TabIndex = 19;
             this.btnEqual.Text = "=";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 350);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "label1";
-            // 
             // lblScreen
             // 
             this.lblScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -400,14 +399,13 @@
             this.lblScreen.Name = "lblScreen";
             this.lblScreen.Size = new System.Drawing.Size(329, 44);
             this.lblScreen.TabIndex = 5;
-            this.lblScreen.Text = "0";
             this.lblScreen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FormCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 535);
+            this.ClientSize = new System.Drawing.Size(338, 535);
             this.Controls.Add(this.lblScreen);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panelFooter);
@@ -416,8 +414,8 @@
             this.Name = "FormCalculadora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormCalculadora_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -447,7 +445,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnNumber0;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnComma;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnEqual;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblScreen;
     }
 }
