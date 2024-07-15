@@ -355,6 +355,7 @@
             this.btnNegative.Size = new System.Drawing.Size(78, 64);
             this.btnNegative.TabIndex = 16;
             this.btnNegative.Text = "+/-";
+            this.btnNegative.Click += new System.EventHandler(this.btnNegative_Click);
             // 
             // btnNumber0
             // 
@@ -384,6 +385,7 @@
             this.btnComma.Size = new System.Drawing.Size(78, 64);
             this.btnComma.TabIndex = 18;
             this.btnComma.Text = ",";
+            this.btnComma.Click += new System.EventHandler(this.btnComma_Click);
             // 
             // btnEqual
             // 

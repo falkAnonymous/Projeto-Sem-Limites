@@ -9,11 +9,15 @@ namespace Calculadora.Modal.Entity
 {
     internal class Sum
     {
+        #region Variaveis 
         public double Valuer1 = 0;
         public double Valuer2 = 0;
         private double SumValuer = 0;
         public Control _control;
         public Control _control2;
+        #endregion
+
+        #region Construtor
 
         public Sum(double valuer1, double valuer2, double sumValuer, Control control1, Control control2)
         {
@@ -24,24 +28,26 @@ namespace Calculadora.Modal.Entity
             this._control2 = control2;
             Somar(Valuer1, Valuer2, SumValuer, _control, _control2);
         }
+        #endregion
 
+        #region Metodos
         private void Somar(double x, double y, double s, Control c, Control c2)
         {
-            
-
-            if (c.Text == "+" && y != 0)
+            s = x;
+            if (c.Text == "+")
             {
-                s += x+y;
-
+                s += y;
                 c2.Text = s.ToString();
             }
             else
             {
-                y = 0;
+                x = 0;
                 s += y;
                 c2.Text = s.ToString();
             }
         }
+        #endregion
+
 
     }
 }

@@ -11,7 +11,7 @@ namespace Calculadora.Modal.Enum
         Soma = 0,
         Subtrair = 1,
         Multiplicar = 2,
-        Dividir = 3
-
+        Dividir = 3,
+        LimparCe = 4
     }
 }
