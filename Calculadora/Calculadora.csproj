@@ -59,9 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\ControlSum.cs" />
-    <Compile Include="Model\Entitys\Sum.cs" />
-    <Compile Include="Model\Interfaces\ISum.cs" />
+    <Compile Include="Modal\Entity\Division.cs" />
+    <Compile Include="Modal\Entity\Multiply.cs" />
+    <Compile Include="Modal\Entity\Subtract.cs" />
+    <Compile Include="Modal\Entity\Sum.cs" />
+    <Compile Include="Modal\Enum\Operators.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

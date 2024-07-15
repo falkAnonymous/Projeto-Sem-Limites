@@ -115,6 +115,7 @@
             this.btnCE.Size = new System.Drawing.Size(78, 64);
             this.btnCE.TabIndex = 0;
             this.btnCE.Text = "CE";
+            this.btnCE.Click += new System.EventHandler(this.btnCE_Click);
             // 
             // btnClear
             // 
@@ -129,6 +130,7 @@
             this.btnClear.Size = new System.Drawing.Size(78, 64);
             this.btnClear.TabIndex = 1;
             this.btnClear.Text = "C";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnClearDigit
             // 
@@ -158,6 +160,7 @@
             this.btnDivision.Size = new System.Drawing.Size(78, 64);
             this.btnDivision.TabIndex = 3;
             this.btnDivision.Text = "÷";
+            this.btnDivision.Click += new System.EventHandler(this.btnDivision_Click);
             // 
             // btnNumber7
             // 
@@ -217,6 +220,7 @@
             this.btnMultiply.Size = new System.Drawing.Size(78, 64);
             this.btnMultiply.TabIndex = 7;
             this.btnMultiply.Text = "X";
+            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
             // 
             // btnNumber4
             // 
@@ -276,6 +280,7 @@
             this.btnSubtract.Size = new System.Drawing.Size(78, 64);
             this.btnSubtract.TabIndex = 11;
             this.btnSubtract.Text = "-";
+            this.btnSubtract.Click += new System.EventHandler(this.btnSubtract_Click);
             // 
             // btnNumber1
             // 
@@ -335,6 +340,7 @@
             this.btnSum.Size = new System.Drawing.Size(78, 64);
             this.btnSum.TabIndex = 15;
             this.btnSum.Text = "+";
+            this.btnSum.Click += new System.EventHandler(this.btnSum_Click);
             // 
             // btnNegative
             // 
@@ -363,6 +369,7 @@
             this.btnNumber0.Size = new System.Drawing.Size(78, 64);
             this.btnNumber0.TabIndex = 17;
             this.btnNumber0.Text = "0";
+            this.btnNumber0.Click += new System.EventHandler(this.btnNumber0_Click);
             // 
             // btnComma
             // 
@@ -391,6 +398,7 @@
             this.btnEqual.Size = new System.Drawing.Size(78, 64);
             this.btnEqual.TabIndex = 19;
             this.btnEqual.Text = "=";
+            this.btnEqual.Click += new System.EventHandler(this.btnEqual_Click);
             // 
             // lblScreen
             // 
