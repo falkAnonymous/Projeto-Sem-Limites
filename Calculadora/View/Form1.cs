@@ -274,6 +274,7 @@ namespace Calculadora
                 if (lblScreen.Text == string.Empty)
                 {
                     lblScreen.Text = ValorInicial.ToString();
+
                 }
             }
 
