@@ -1,6 +1,7 @@
 ﻿using Calculadora.Modal.Entity;
 using Calculadora.Modal.Enum;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Calculadora
@@ -13,6 +14,10 @@ namespace Calculadora
         double ResultadoValor = 0;
         double UltimoDigito = 0;
         Operators operators = new Operators();
+
+        Point point;
+        int XMouse, YMouse;
+        bool Mover = false;
 
         public FormCalculadora()
         {
@@ -340,6 +345,29 @@ namespace Calculadora
                 lblScreen.Text = lblScreen.Text.TrimStart('-');
                 _sinalNegativo = false;
             }
+        }
+
+        private void panelHead_MouseDown(object sender, MouseEventArgs e)
+        {
+            Mover = true;
+            XMouse = e.X; 
+            YMouse = e.Y;
+        }
+
+        private void panelHead_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (Mover)
+            {
+                int Xpoint, Ypoint;
+                Xpoint = e.X - XMouse;
+                Ypoint = e.Y - YMouse;
+                this.Location = point = new Point(this.Location.X + Xpoint, this.Location.Y + Ypoint);
+            }
+        }
+
+        private void panelHead_MouseUp(object sender, MouseEventArgs e)
+        {
+            Mover = false;
         }
     }
 

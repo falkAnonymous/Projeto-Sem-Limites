@@ -52,21 +52,30 @@
             this.btnComma = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnEqual = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.lblScreen = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panelHead.SuspendLayout();
+            this.panelFooter.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelHead
             // 
             this.panelHead.BackColor = System.Drawing.Color.DarkViolet;
+            this.panelHead.Controls.Add(this.label1);
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHead.Location = new System.Drawing.Point(0, 0);
             this.panelHead.Name = "panelHead";
             this.panelHead.Size = new System.Drawing.Size(338, 43);
             this.panelHead.TabIndex = 0;
+            this.panelHead.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelHead_MouseDown);
+            this.panelHead.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHead_MouseMove);
+            this.panelHead.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelHead_MouseUp);
             // 
             // panelFooter
             // 
             this.panelFooter.BackColor = System.Drawing.Color.DarkViolet;
+            this.panelFooter.Controls.Add(this.label2);
             this.panelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelFooter.Location = new System.Drawing.Point(0, 469);
             this.panelFooter.Name = "panelFooter";
@@ -411,6 +420,28 @@
             this.lblScreen.TabIndex = 5;
             this.lblScreen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Pacifico", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(86, -1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 35);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Calculadora";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Pacifico", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(47, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(252, 63);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Created by David";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,6 +456,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormCalculadora_Load);
+            this.panelHead.ResumeLayout(false);
+            this.panelFooter.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -456,6 +489,8 @@
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnComma;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnEqual;
         private System.Windows.Forms.Label lblScreen;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
