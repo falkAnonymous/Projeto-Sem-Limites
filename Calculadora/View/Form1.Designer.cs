@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.panelHead = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelFooter = new Guna.UI2.WinForms.Guna2Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCE = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnClear = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.btnClearDigit = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnDivision = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnNumber7 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnNumber8 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -52,16 +53,18 @@
             this.btnComma = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnEqual = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.lblScreen = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnClearDigit = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.pictureExit = new System.Windows.Forms.PictureBox();
             this.panelHead.SuspendLayout();
             this.panelFooter.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureExit)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHead
             // 
             this.panelHead.BackColor = System.Drawing.Color.DarkViolet;
+            this.panelHead.Controls.Add(this.pictureExit);
             this.panelHead.Controls.Add(this.label1);
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHead.Location = new System.Drawing.Point(0, 0);
@@ -72,6 +75,18 @@
             this.panelHead.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHead_MouseMove);
             this.panelHead.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelHead_MouseUp);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Pacifico", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(109, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 41);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Calculadora";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panelFooter
             // 
             this.panelFooter.BackColor = System.Drawing.Color.DarkViolet;
@@ -81,6 +96,17 @@
             this.panelFooter.Name = "panelFooter";
             this.panelFooter.Size = new System.Drawing.Size(338, 66);
             this.panelFooter.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Pacifico", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(47, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(252, 63);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Created by David";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flowLayoutPanel1
             // 
@@ -140,21 +166,6 @@
             this.btnClear.TabIndex = 1;
             this.btnClear.Text = "C";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnClearDigit
-            // 
-            this.btnClearDigit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClearDigit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClearDigit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClearDigit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClearDigit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnClearDigit.ForeColor = System.Drawing.Color.White;
-            this.btnClearDigit.Location = new System.Drawing.Point(173, 3);
-            this.btnClearDigit.Name = "btnClearDigit";
-            this.btnClearDigit.Size = new System.Drawing.Size(78, 64);
-            this.btnClearDigit.TabIndex = 2;
-            this.btnClearDigit.Text = "LIMPAR";
-            this.btnClearDigit.Click += new System.EventHandler(this.btnClearDigit_Click);
             // 
             // btnDivision
             // 
@@ -414,39 +425,48 @@
             // lblScreen
             // 
             this.lblScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScreen.ForeColor = System.Drawing.Color.Black;
             this.lblScreen.Location = new System.Drawing.Point(5, 60);
             this.lblScreen.Name = "lblScreen";
             this.lblScreen.Size = new System.Drawing.Size(329, 44);
             this.lblScreen.TabIndex = 5;
             this.lblScreen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label1
+            // btnClearDigit
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Pacifico", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(109, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 41);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Calculadora";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClearDigit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClearDigit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClearDigit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClearDigit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClearDigit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClearDigit.ForeColor = System.Drawing.Color.White;
+            this.btnClearDigit.Image = global::Calculadora.Properties.Resources.Clear_Symbol;
+            this.btnClearDigit.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnClearDigit.Location = new System.Drawing.Point(173, 3);
+            this.btnClearDigit.Name = "btnClearDigit";
+            this.btnClearDigit.Size = new System.Drawing.Size(78, 64);
+            this.btnClearDigit.TabIndex = 2;
+            this.btnClearDigit.Click += new System.EventHandler(this.btnClearDigit_Click);
             // 
-            // label2
+            // pictureExit
             // 
-            this.label2.Font = new System.Drawing.Font("Pacifico", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(47, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(252, 63);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Created by David";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureExit.Image = global::Calculadora.Properties.Resources.Close;
+            this.pictureExit.Location = new System.Drawing.Point(302, 6);
+            this.pictureExit.Name = "pictureExit";
+            this.pictureExit.Size = new System.Drawing.Size(29, 28);
+            this.pictureExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureExit.TabIndex = 1;
+            this.pictureExit.TabStop = false;
+            this.pictureExit.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureExit.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.pictureExit.MouseLeave += new System.EventHandler(this.pictureExit_MouseLeave);
             // 
             // FormCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(338, 535);
             this.Controls.Add(this.lblScreen);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -461,6 +481,7 @@
             this.panelHead.PerformLayout();
             this.panelFooter.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -493,6 +514,7 @@
         private System.Windows.Forms.Label lblScreen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureExit;
     }
 }
 

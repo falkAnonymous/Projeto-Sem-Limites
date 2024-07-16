@@ -8,16 +8,22 @@ namespace Calculadora
 {
     public partial class FormCalculadora : Form
     {
-        int ValorInicial = 0;
-        double valor1 = 0;
-        double valor2 = 0;
-        double ResultadoValor = 0;
-        double UltimoDigito = 0;
+        #region Variaveis
+
+        int InitValue = 0;
+        double Value1 = 0;
+        double Value2 = 0;
+        double ResultValue = 0;
+        double LastDigit = 0;
         Operators operators = new Operators();
 
+        // Variaveis da Janela
         Point point;
         int XMouse, YMouse;
         bool Mover = false;
+
+        #endregion
+
 
         public FormCalculadora()
         {
@@ -28,7 +34,7 @@ namespace Calculadora
         private void FormCalculadora_Load(object sender, EventArgs e)
         {
             lblScreen.Focus();
-            lblScreen.Text = ValorInicial.ToString();
+            lblScreen.Text = InitValue.ToString();
 
         }
 
@@ -46,7 +52,7 @@ namespace Calculadora
             }
 
             lblScreen.Text += btnNumber1.Text;
-            UltimoDigito = double.Parse(btnNumber1.Text);
+            LastDigit = double.Parse(btnNumber1.Text);
         }
 
         //Botão Numero 2
@@ -56,7 +62,7 @@ namespace Calculadora
             {
                 lblScreen.Text = string.Empty;
             }
-            UltimoDigito = double.Parse(btnNumber2.Text);
+            LastDigit = double.Parse(btnNumber2.Text);
             lblScreen.Text += btnNumber2.Text;
         }
 
@@ -67,7 +73,7 @@ namespace Calculadora
             {
                 lblScreen.Text = string.Empty;
             }
-            UltimoDigito = double.Parse(btnNumber3.Text);
+            LastDigit = double.Parse(btnNumber3.Text);
             lblScreen.Text += btnNumber3.Text;
         }
         //Botão Numero 4
@@ -77,7 +83,7 @@ namespace Calculadora
             {
                 lblScreen.Text = string.Empty;
             }
-            UltimoDigito = double.Parse(btnNumber4.Text);
+            LastDigit = double.Parse(btnNumber4.Text);
             lblScreen.Text += btnNumber4.Text;
         }
         //Botão Numero 5
@@ -87,7 +93,7 @@ namespace Calculadora
             {
                 lblScreen.Text = string.Empty;
             }
-            UltimoDigito = double.Parse(btnNumber5.Text);
+            LastDigit = double.Parse(btnNumber5.Text);
             lblScreen.Text += btnNumber5.Text;
         }
         //Botão Numero 6
@@ -97,7 +103,7 @@ namespace Calculadora
             {
                 lblScreen.Text = string.Empty;
             }
-            UltimoDigito = double.Parse(btnNumber6.Text);
+            LastDigit = double.Parse(btnNumber6.Text);
             lblScreen.Text += btnNumber6.Text;
         }
         //Botão Numero 7
@@ -107,7 +113,7 @@ namespace Calculadora
             {
                 lblScreen.Text = string.Empty;
             }
-            UltimoDigito = double.Parse(btnNumber7.Text);
+            LastDigit = double.Parse(btnNumber7.Text);
             lblScreen.Text += btnNumber7.Text;
         }
         //Botão Numero 8
@@ -117,7 +123,7 @@ namespace Calculadora
             {
                 lblScreen.Text = string.Empty;
             }
-            UltimoDigito = double.Parse(btnNumber8.Text);
+            LastDigit = double.Parse(btnNumber8.Text);
             lblScreen.Text += btnNumber8.Text;
         }
         //Botão Numero 9
@@ -127,7 +133,7 @@ namespace Calculadora
             {
                 lblScreen.Text = string.Empty;
             }
-            UltimoDigito = double.Parse(btnNumber9.Text);
+            LastDigit = double.Parse(btnNumber9.Text);
             lblScreen.Text += btnNumber9.Text;
         }
         // Botão Numero 0
@@ -137,61 +143,13 @@ namespace Calculadora
             {
                 lblScreen.Text = string.Empty;
             }
-            UltimoDigito = double.Parse(btnNumber0.Text);
+            LastDigit = double.Parse(btnNumber0.Text);
             lblScreen.Text += btnNumber0.Text;
         }
 
         #endregion
 
         #region Configurando os Eventos dos Botões Operadores
-        //Botão Divisão
-        private void btnDivision_Click(object sender, EventArgs e)
-        {
-            if (sender == btnSum)
-                operators = Operators.Soma;
-            else if (sender == btnSubtract)
-                operators = Operators.Subtrair;
-            else if (sender == btnMultiply)
-                operators = Operators.Multiplicar;
-            else if (sender == btnDivision)
-            {
-                operators = Operators.Dividir;
-                valor1 = double.Parse(lblScreen.Text);
-                lblScreen.Text = ValorInicial.ToString();
-            }
-        }
-        //Botão Multiplicar
-        private void btnMultiply_Click(object sender, EventArgs e)
-        {
-            if (sender == btnSum)
-                operators = Operators.Soma;
-            else if (sender == btnSubtract)
-                operators = Operators.Subtrair;
-            else if (sender == btnMultiply)
-            {
-                operators = Operators.Multiplicar;
-                valor1 = double.Parse(lblScreen.Text);
-                lblScreen.Text = ValorInicial.ToString();
-            }
-            else if (sender == btnDivision)
-                operators = Operators.Dividir;
-        }
-        //Botão Subtrair
-        private void btnSubtract_Click(object sender, EventArgs e)
-        {
-            if (sender == btnSum)
-                operators = Operators.Soma;
-            else if (sender == btnSubtract)
-            {
-                operators = Operators.Subtrair;
-                valor1 = double.Parse(lblScreen.Text);
-                lblScreen.Text = ValorInicial.ToString();
-            }
-            else if (sender == btnMultiply)
-                operators = Operators.Multiplicar;
-            else if (sender == btnDivision)
-                operators = Operators.Dividir;
-        }
         //Botão Soma
         private void btnSum_Click(object sender, EventArgs e)
         {
@@ -199,23 +157,51 @@ namespace Calculadora
             if (sender == btnSum)
             {
                 operators = Operators.Soma;
-                valor1 = double.Parse(lblScreen.Text);
-                lblScreen.Text = ValorInicial.ToString();
+                Value1 = double.Parse(lblScreen.Text);
+                lblScreen.Text = InitValue.ToString();
             }
-            else if (sender == btnSubtract)
+        }
+        //Botão Subtrair
+        private void btnSubtract_Click(object sender, EventArgs e)
+        {
+            if (sender == btnSubtract)
+            {
                 operators = Operators.Subtrair;
-            else if (sender == btnMultiply)
-                operators = Operators.Multiplicar;
-            else if (sender == btnDivision)
-                operators = Operators.Dividir;
+                Value1 = double.Parse(lblScreen.Text);
+                lblScreen.Text = InitValue.ToString();
+            }
 
         }
+
+        //Botão Multiplicar
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            if (sender == btnMultiply)
+            {
+                operators = Operators.Multiplicar;
+                Value1 = double.Parse(lblScreen.Text);
+                lblScreen.Text = InitValue.ToString();
+            }
+        }
+
+        //Botão Divisão
+        private void btnDivision_Click(object sender, EventArgs e)
+        {
+            if (sender == btnDivision)
+            {
+                operators = Operators.Dividir;
+                Value1 = double.Parse(lblScreen.Text);
+                lblScreen.Text = InitValue.ToString();
+            }
+        }
+        
+        
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(lblScreen.Text))
             {
-                valor2 = double.Parse(lblScreen.Text);
+                Value2 = double.Parse(lblScreen.Text);
 
                 switch (operators)
                 {
@@ -223,9 +209,8 @@ namespace Calculadora
 
                         if (btnSum.Text == "+")
                         {
-
                             Sum sum = new Sum();
-                            sum.Somar(ref valor1, valor2, btnSum, lblScreen);
+                            sum._Sum(Value1, Value2, btnSum, lblScreen);
                         }
                         break;
 
@@ -233,7 +218,7 @@ namespace Calculadora
                         if (btnSubtract.Text == "-")
                         {
                             Subtract subtract = new Subtract();
-                            subtract.Subtrair(ref valor1, valor2, btnSum, lblScreen);
+                            subtract._Subtract(Value1, Value2, btnSubtract, lblScreen);
                         }
                         break;
 
@@ -242,7 +227,7 @@ namespace Calculadora
                         if (btnMultiply.Text == "X")
                         {
                             Multiply multiply = new Multiply();
-                            multiply.Multiplicar(ref valor1, valor2, btnSum, lblScreen);
+                            multiply._Multiply(Value1, Value2, btnMultiply, lblScreen);
                         }
                         break;
 
@@ -250,14 +235,14 @@ namespace Calculadora
                         if (btnDivision.Text == "÷")
                         {
                             Division division = new Division();
-                            division.Dividir(ref valor1, valor2, btnSum, lblScreen);
+                            division._Division(Value1, Value2, btnDivision, lblScreen);
                         }
                         break;
                     case Operators.LimparCe:
                         if (btnCE.Text == "CE")
                         {
-                            valor1 = UltimoDigito;
-                            lblScreen.Text = valor1.ToString();
+                            Value1 = LastDigit;
+                            lblScreen.Text = Value1.ToString();
                         }
                         break;
                 }
@@ -278,7 +263,7 @@ namespace Calculadora
 
                 if (lblScreen.Text == string.Empty)
                 {
-                    lblScreen.Text = ValorInicial.ToString();
+                    lblScreen.Text = InitValue.ToString();
                 }
             }
 
@@ -291,9 +276,9 @@ namespace Calculadora
 
             if (lblScreen.Text.Length > 0)
             {
-                UltimoDigito = 0;
-                valor1 = 0;
-                valor2 = 0;
+                LastDigit = 0;
+                Value1 = 0;
+                Value2 = 0;
                 _comma = 0;
                 lblScreen.Text = Resetar.ToString();
 
@@ -314,7 +299,7 @@ namespace Calculadora
             else if (sender == btnCE)
             {
                 operators = Operators.LimparCe;
-                lblScreen.Text = ValorInicial.ToString();
+                lblScreen.Text = InitValue.ToString();
             }
         }
         #endregion
@@ -372,8 +357,25 @@ namespace Calculadora
         {
             Mover = false;
         }
+
+
+        #endregion
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void pictureExit_MouseLeave(object sender, EventArgs e)
+        {
+            pictureExit.BackColor = Color.Transparent;
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            pictureExit.BackColor = Color.FromArgb(100, 255, 255, 255);
+        }
     }
-    #endregion
 
 
 

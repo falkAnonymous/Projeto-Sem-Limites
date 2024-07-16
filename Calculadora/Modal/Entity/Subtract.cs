@@ -10,7 +10,7 @@ namespace Calculadora.Modal.Entity
     internal class Subtract
     {
 
-        public void Subtrair(ref double x, double y, Control c, Control c2)
+        public void _Subtract(double x, double y, Control c, Control c2)
         {
             if (c.Text == "-")
             {

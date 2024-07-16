@@ -10,11 +10,11 @@ namespace Calculadora.Modal.Entity
     internal class Multiply
     {
 
-        public void Multiplicar(ref double x, double y, Control c, Control c2)
+        public void _Multiply(double x, double y, Control c, Control c2)
         {
             if (c.Text == "X")
             {
-                x += y;
+                x *= y;
                 c2.Text = x.ToString();
             }
         }

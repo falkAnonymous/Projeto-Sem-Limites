@@ -9,8 +9,8 @@ namespace Calculadora.Modal.Entity
 {
     internal class Division
     {
-        
-        public void Dividir(ref double x, double y, Control c, Control c2)
+
+        public void _Division(double x, double y, Control c, Control c2)
         {
 
             if (c.Text == "÷" && y != 0)

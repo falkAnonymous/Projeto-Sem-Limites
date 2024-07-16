@@ -11,7 +11,7 @@ namespace Calculadora.Modal.Entity
     {
         
         #region Metodos
-        public void Somar(ref double x, double y, Control c, Control c2)
+        public void _Sum(double x, double y, Control c, Control c2)
         {
             
             if (c.Text == "+")
