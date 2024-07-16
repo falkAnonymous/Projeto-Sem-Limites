@@ -224,16 +224,16 @@ namespace Calculadora
                         if (btnSum.Text == "+")
                         {
 
-                            Sum sum = new Sum(valor1, valor2, ResultadoValor, btnSum, lblScreen);
-                            lblScreen.Text = sum._control2.Text;
+                            Sum sum = new Sum();
+                            sum.Somar(ref valor1, valor2, btnSum, lblScreen);
                         }
                         break;
 
                     case Operators.Subtrair:
                         if (btnSubtract.Text == "-")
                         {
-                            Subtract subtract = new Subtract(valor1, valor2, ResultadoValor, btnSubtract, lblScreen);
-                            lblScreen.Text = subtract._control2.Text;
+                            Subtract subtract = new Subtract();
+                            subtract.Subtrair(ref valor1, valor2, btnSum, lblScreen);
                         }
                         break;
 
@@ -241,16 +241,16 @@ namespace Calculadora
 
                         if (btnMultiply.Text == "X")
                         {
-                            Multiply multiply = new Multiply(valor1, valor2, ResultadoValor, btnMultiply, lblScreen);
-                            lblScreen.Text = multiply._control2.Text;
+                            Multiply multiply = new Multiply();
+                            multiply.Multiplicar(ref valor1, valor2, btnSum, lblScreen);
                         }
                         break;
 
                     case Operators.Dividir:
                         if (btnDivision.Text == "÷")
                         {
-                            Division division = new Division(valor1, valor2, ResultadoValor, btnDivision, lblScreen);
-                            lblScreen.Text = division._control2.Text;
+                            Division division = new Division();
+                            division.Dividir(ref valor1, valor2, btnSum, lblScreen);
                         }
                         break;
                     case Operators.LimparCe:
@@ -319,6 +319,7 @@ namespace Calculadora
         }
         #endregion
 
+        #region Configurando Botões a parte
         int _comma = 0;
 
         private void btnComma_Click(object sender, EventArgs e)
@@ -335,7 +336,7 @@ namespace Calculadora
         bool _sinalNegativo = false;
         private void btnNegative_Click(object sender, EventArgs e)
         {
-            if(!_sinalNegativo)
+            if (!_sinalNegativo)
             {
                 lblScreen.Text = "-" + lblScreen.Text;
                 _sinalNegativo = true;
@@ -346,11 +347,13 @@ namespace Calculadora
                 _sinalNegativo = false;
             }
         }
+        #endregion
 
+        #region Configurando os Botões de Mover a janela
         private void panelHead_MouseDown(object sender, MouseEventArgs e)
         {
             Mover = true;
-            XMouse = e.X; 
+            XMouse = e.X;
             YMouse = e.Y;
         }
 
@@ -370,5 +373,8 @@ namespace Calculadora
             Mover = false;
         }
     }
+    #endregion
+
+
 
 }
