@@ -1,5 +1,5 @@
 <div>
-  <img src="https://media.licdn.com/dms/image/D4D3DAQFJEAic0439Bw/image-scale_191_1128/0/1703397956459/sem_limites_edtech_cover?e=1721876400&v=beta&t=aivA98uuphqIPSXS6OBAnJy7GMXIlzi5fYul9CtHBPg" hight="" width="">
+  <img src="https://media.licdn.com/dms/image/D4D3DAQFJEAic0439Bw/image-scale_191_1128/0/1703397956459/sem_limites_edtech_cover?e=1722646800&v=beta&t=Z1xrykKR3f5yZj8nF1Q1VwqyE8XnnEPw8yVS9CwbxNQ">
 </div>
 <h1> # Projeto Sem Limites</h1>
 
